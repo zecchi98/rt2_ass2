@@ -1,0 +1,15 @@
+#goal definition
+float32 x
+float32 y
+float32 theta
+float32 lin_vel
+float32 ang_vel
+geometry_msgs/Point target_position
+---
+#result definition
+bool ok
+---
+#feedback
+float32 actual_theta
+geometry_msgs/Point actual_position
+string stat
