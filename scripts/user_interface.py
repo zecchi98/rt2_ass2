@@ -1,6 +1,6 @@
 import rospy
 import time
-from rt2_ass1_ros1.srv import Command
+from rt2_ass2.srv import Command
 def main():
     robot_moving=False;
     rospy.init_node('user_interface')

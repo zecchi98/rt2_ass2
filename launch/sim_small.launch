@@ -5,7 +5,7 @@
   <arg name="model" default="$(find rt2_ass2)/urdf/my_robot.urdf" />
 
   <!-- We resume the logic in empty_world.launch -->
-   <include file="$(find gazebo_ros)/launch/empty_world.launch"> 
+   <include file="$(find gazebo_ros)/launch/empty_world_small.launch"> 
     <arg name="paused" value="false"/>
   </include>
 
