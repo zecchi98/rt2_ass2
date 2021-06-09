@@ -1,6 +1,16 @@
 #!/usr/bin/env python
 
-
+## @package rt2_ass2
+# \file go_to_point_action.py
+# \brief This file will directly operate on the robot based on the goal received
+# \author Federico Zecchi
+# \date 18/06/21
+# \details
+#
+# Action Server:<BR>
+#  °/go_to_point_action
+#
+#
 import rospy
 from geometry_msgs.msg import Twist, Point
 from nav_msgs.msg import Odometry
@@ -34,7 +44,15 @@ ub_d = 0.6
 # action_server
 act_s = None
 
-# callbacks
+
+
+
+## The clbk_odom function.
+#
+#  This Callback is for the subscriber to topic odom
+#  it keeps track of the robot pose.
+#
+# @arg msg the message carrying the information
 def clbk_odom(msg):
     global position_
     global yaw_
@@ -50,19 +68,32 @@ def clbk_odom(msg):
     euler = transformations.euler_from_quaternion(quaternion)
     yaw_ = euler[2]
 
+## The change_state function.
+#
+#  It controls the state of the robot, allowing to translate
+#  or to rotate when needed.
 
+# @param state indicates the new state to chancge to
+# @var state_ the current state of the robot
 def change_state(state):
     global state_
     state_ = state
     print ('State changed to [%s]' % state_)
 
 
+## The normalize_angle function.
+#
+#  It performs normalazation of an angle .
 def normalize_angle(angle):
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
 
-
+## The fix_yah function.
+#
+#  It rotates the robot to fix it's yah in the desired direction
+#  by publishing a twist message on /cmd_vel
+#  @param des_pos from this desired position computes the desired yah
 def fix_yaw(des_pos):
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
@@ -78,6 +109,12 @@ def fix_yaw(des_pos):
     if math.fabs(err_yaw) <= yaw_precision_2_:
         change_state(1)
 
+
+
+
+## The go_straight_ahead function.
+#
+#  It allows the robot to go straight or to change it's state if needed
 def go_straight_ahead(des_pos):
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = desired_yaw - yaw_
@@ -96,7 +133,10 @@ def go_straight_ahead(des_pos):
     else: # state change conditions
         change_state(2)
 
-
+## The fix_final_yah function.
+#
+#  It allows the robot to fix it's yah and reach the final state(done)
+#  if the conditions are met
 def fix_final_yaw(des_yaw):
     err_yaw = normalize_angle(des_yaw - yaw_)
     #rospy.loginfo(err_yaw)
@@ -112,7 +152,9 @@ def fix_final_yaw(des_yaw):
     if math.fabs(err_yaw) <= yaw_precision_2_:
         change_state(3)
 
-
+## The done function.
+#
+#  It stops the robot meaning that the pose has been reached
 def done():
     twist_msg = Twist()
     twist_msg.linear.x = 0
@@ -120,6 +162,11 @@ def done():
     pub_.publish(twist_msg)
 
 
+## The planning function.
+#
+#  It is the action callback. The script will remain inside this function, due to the while loop.
+#  Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated
+# @param goal It is the goal required in the action server
 def planning(goal):
 
     global state_, desired_position_,act_s,kp_a,kp_d
@@ -139,6 +186,7 @@ def planning(goal):
 
     while not rospy.is_shutdown():
         #during each state, the feedback is updated
+
         if act_s.is_preempt_requested():
             #if the goal is deleted then the system stop the robot through the function done()
             rospy.loginfo('Goal was preempted')
@@ -147,24 +195,29 @@ def planning(goal):
 
             success = False
             break
+
+        # the yaw will be fixed
         elif state_ == 0:
             feedback.stat = "Fixing the yaw"
             feedback.actual_position = position_
             feedback.actual_theta=yaw_
             act_s.publish_feedback(feedback)
             fix_yaw(desired_position_)
+        # The angle will be aligned
         elif state_ == 1:
             feedback.stat = "Angle aligned"
             feedback.actual_position = position_
             feedback.actual_theta=yaw_
             act_s.publish_feedback(feedback)
             go_straight_ahead(desired_position_)
+        # The position is reached, so the angle will be fixed
         elif state_ == 2:
             feedback.stat = "position reached,fixing angle!"
             feedback.actual_position = position_
             feedback.actual_theta=yaw_
             act_s.publish_feedback(feedback)
             fix_final_yaw(des_yaw)
+        #The target has been reached
         elif state_ == 3:
             feedback.stat = "Target reached!"
             feedback.actual_position = position_
@@ -181,6 +234,12 @@ def planning(goal):
         act_s.set_succeeded(result)
 
 
+
+## Documentation for the main function.
+#
+#  More details.
+#
+# @param None
 def main():
     global pub_,active_, act_s
     rospy.init_node('go_to_point_action')
