@@ -1,22 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="position__service_8cpp" kind="file" language="C++">
     <compoundname>position_service.cpp</compoundname>
     <includes local="yes">ros/ros.h</includes>
     <includes local="yes">rt2_ass2/RandomPosition.h</includes>
     <incdepgraph>
-      <node id="13">
+      <node id="2">
         <label>ros/ros.h</label>
       </node>
-      <node id="14">
+      <node id="3">
         <label>rt2_ass2/RandomPosition.h</label>
       </node>
-      <node id="12">
+      <node id="1">
         <label>src/position_service.cpp</label>
         <link refid="position__service_8cpp"/>
-        <childnode refid="13" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -42,20 +42,23 @@
 <parametername>M</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the minimum of a certain range </para></parameterdescription>
+<para>the minimum of a certain range </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>N</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the maximum of a certain range </para></parameterdescription>
+<para>the maximum of a certain range </para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>        </detaileddescription>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/position_service.cpp" line="28" column="1" bodyfile="src/position_service.cpp" bodystart="28" bodyend="29"/>
+        <location file="src/position_service.cpp" line="28" column="8" bodyfile="src/position_service.cpp" bodystart="28" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="position__service_8cpp_1a50b96db7340f22ccfd1b065a5e159c7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -78,20 +81,23 @@
 <parametername>req</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the request received: it gets two intervals of values for x and y </para></parameterdescription>
+<para>the request received: it gets two intervals of values for x and y </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>res</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the response returned to the client: the random coordinates within a specific interval </para></parameterdescription>
+<para>the response returned to the client: the random coordinates within a specific interval </para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>        </detaileddescription>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/position_service.cpp" line="35" column="1" bodyfile="src/position_service.cpp" bodystart="35" bodyend="40"/>
+        <location file="src/position_service.cpp" line="35" column="6" bodyfile="src/position_service.cpp" bodystart="35" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="position__service_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -109,28 +115,37 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>The Main function It simply initializes the service server, binding him to its function </para>        </detaileddescription>
+<para>The Main function It simply initializes the service server, binding him to its function </para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/position_service.cpp" line="46" column="1" bodyfile="src/position_service.cpp" bodystart="46" bodyend="57"/>
+        <location file="src/position_service.cpp" line="46" column="5" bodyfile="src/position_service.cpp" bodystart="46" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This file will generate a service to require random x,y,theta values. </para>    </briefdescription>
+<para>This file will generate a service to require random x,y,theta values. </para>
+    </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Federico Zecchi </para></simplesect>
-<simplesect kind="version"><para>1 </para></simplesect>
-<simplesect kind="date"><para>18/06/21 </para></simplesect>
+<para><simplesect kind="author"><para>Federico Zecchi </para>
+</simplesect>
+<simplesect kind="version"><para>1 </para>
+</simplesect>
+<simplesect kind="date"><para>18/06/21 </para>
+</simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">world_width</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Define the width of the discretized world</para></parameterdescription>
+<para>Define the width of the discretized world</para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
 Services:<linebreak/>
- °/position_server</para><para>Description :</para><para>This node will create a server to require random x,y,theta values </para>    </detaileddescription>
+ °/position_server</para>
+<para>Description :</para>
+<para>This node will create a server to require random x,y,theta values </para>
+    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="25"><highlight class="preprocessor">#include<sp/>&quot;ros/ros.h&quot;</highlight><highlight class="normal"></highlight></codeline>

@@ -1,8 +1,8 @@
-\hypertarget{state__machine_8cpp}{}\section{src/state\+\_\+machine.cpp File Reference}
-\label{state__machine_8cpp}\index{src/state\+\_\+machine.\+cpp@{src/state\+\_\+machine.\+cpp}}
+\hypertarget{state__machine_8cpp}{}\doxysection{src/state\+\_\+machine.cpp File Reference}
+\label{state__machine_8cpp}\index{src/state\_machine.cpp@{src/state\_machine.cpp}}
 
 
-This file will let the user interface comunicate with the \hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}.  
+This file will let the user interface comunicate with the \mbox{\hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}}.  
 
 
 {\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
@@ -18,14 +18,14 @@ Include dependency graph for state\+\_\+machine.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{state__machine_8cpp__incl}
 \end{center}
 \end{figure}
-\subsection*{Functions}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{state__machine_8cpp_ac04c316253aedc174376e609ca84098e}{user\+\_\+interface} (rt2\+\_\+ass2\+::\+Command\+::\+Request \&req, rt2\+\_\+ass2\+::\+Command\+::\+Response \&res)
+bool \mbox{\hyperlink{state__machine_8cpp_ac04c316253aedc174376e609ca84098e}{user\+\_\+interface}} (rt2\+\_\+ass2\+::\+Command\+::\+Request \&req, rt2\+\_\+ass2\+::\+Command\+::\+Response \&res)
 \item 
-int \hyperlink{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+int \mbox{\hyperlink{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
-\subsection*{Variables}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{state__machine_8cpp_aa90516c0d0bcfb73be3cb5baf2e889c6}\label{state__machine_8cpp_aa90516c0d0bcfb73be3cb5baf2e889c6}} 
@@ -45,8 +45,8 @@ float {\bfseries ang\+\_\+vel} =0
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-This file will let the user interface comunicate with the \hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}. 
+\doxysubsection{Detailed Description}
+This file will let the user interface comunicate with the \mbox{\hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}}. 
 
 \begin{DoxyAuthor}{Author}
 Federico Zecchi 
@@ -59,7 +59,7 @@ Federico Zecchi
 \end{DoxyDate}
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em world\+\_\+width} & Define the width of the discretized world\\
+\mbox{\texttt{ in}}  & {\em world\+\_\+width} & Define the width of the discretized world\\
 \hline
 \end{DoxyParams}
 Services\+:~\newline
@@ -71,21 +71,21 @@ Clients\+:~\newline
 Action Client\+:~\newline
  °/go\+\_\+to\+\_\+point\+\_\+action Description \+:
 
-This node will be the bridge between the user interface, and the \hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}. It will receive commands from the user interface. It can elaborate new random target from the position\+\_\+server. It can start or stop the \hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action} 
+This node will be the bridge between the user interface, and the \mbox{\hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}}. It will receive commands from the user interface. It can elaborate new random target from the position\+\_\+server. It can start or stop the \mbox{\hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}} 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
-\index{state\+\_\+machine.\+cpp@{state\+\_\+machine.\+cpp}!main@{main}}
-\index{main@{main}!state\+\_\+machine.\+cpp@{state\+\_\+machine.\+cpp}}
-\subsubsection{\texorpdfstring{main()}{main()}}
+\index{state\_machine.cpp@{state\_machine.cpp}!main@{main}}
+\index{main@{main}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
 
 The main funtion
 
 This function initializes everithing that is needed waits for commands and then performes the various requests to services and action \mbox{\Hypertarget{state__machine_8cpp_ac04c316253aedc174376e609ca84098e}\label{state__machine_8cpp_ac04c316253aedc174376e609ca84098e}} 
-\index{state\+\_\+machine.\+cpp@{state\+\_\+machine.\+cpp}!user\+\_\+interface@{user\+\_\+interface}}
-\index{user\+\_\+interface@{user\+\_\+interface}!state\+\_\+machine.\+cpp@{state\+\_\+machine.\+cpp}}
-\subsubsection{\texorpdfstring{user\+\_\+interface()}{user\_interface()}}
+\index{state\_machine.cpp@{state\_machine.cpp}!user\_interface@{user\_interface}}
+\index{user\_interface@{user\_interface}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{user\_interface()}{user\_interface()}}
 {\footnotesize\ttfamily bool user\+\_\+interface (\begin{DoxyParamCaption}\item[{rt2\+\_\+ass2\+::\+Command\+::\+Request \&}]{req,  }\item[{rt2\+\_\+ass2\+::\+Command\+::\+Response \&}]{res }\end{DoxyParamCaption})}
 
 The user\+\_\+interface function

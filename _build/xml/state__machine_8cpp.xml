@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="state__machine_8cpp" kind="file" language="C++">
     <compoundname>state_machine.cpp</compoundname>
     <includes local="yes">ros/ros.h</includes>
@@ -9,38 +9,38 @@
     <includes local="yes">rt2_ass2/go_to_pointAction.h</includes>
     <includes local="no">actionlib/client/simple_action_client.h</includes>
     <incdepgraph>
-      <node id="18">
+      <node id="3">
         <label>rt2_ass2/Command.h</label>
       </node>
-      <node id="19">
+      <node id="4">
         <label>rt2_ass2/Position.h</label>
       </node>
-      <node id="22">
-        <label>actionlib/client/simple_action_client.h</label>
-      </node>
-      <node id="17">
-        <label>ros/ros.h</label>
-      </node>
-      <node id="20">
-        <label>rt2_ass2/RandomPosition.h</label>
-      </node>
-      <node id="16">
+      <node id="1">
         <label>src/state_machine.cpp</label>
         <link refid="state__machine_8cpp"/>
-        <childnode refid="17" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="7">
+        <label>actionlib/client/simple_action_client.h</label>
+      </node>
+      <node id="2">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="5">
+        <label>rt2_ass2/RandomPosition.h</label>
+      </node>
+      <node id="6">
         <label>rt2_ass2/go_to_pointAction.h</label>
       </node>
     </incdepgraph>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="35" column="1" bodyfile="src/state_machine.cpp" bodystart="35" bodyend="-1"/>
+        <location file="src/state_machine.cpp" line="35" column="6" bodyfile="src/state_machine.cpp" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="state__machine_8cpp_1a028d5a1ebf6347bef506d0f712dbea00" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="36" column="1" bodyfile="src/state_machine.cpp" bodystart="36" bodyend="-1"/>
+        <location file="src/state_machine.cpp" line="36" column="6" bodyfile="src/state_machine.cpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="state__machine_8cpp_1ab376b87f96a574a793c03c53e75afec8" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="37" column="1" bodyfile="src/state_machine.cpp" bodystart="37" bodyend="-1"/>
+        <location file="src/state_machine.cpp" line="37" column="6" bodyfile="src/state_machine.cpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="state__machine_8cpp_1a57dccd06a6ac28217e5dda6009c4eb55" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="38" column="1" bodyfile="src/state_machine.cpp" bodystart="38" bodyend="-1"/>
+        <location file="src/state_machine.cpp" line="38" column="7" bodyfile="src/state_machine.cpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="state__machine_8cpp_1ac4793035b5d8c1967e0c092d55e5d5df" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="39" column="1" bodyfile="src/state_machine.cpp" bodystart="39" bodyend="-1"/>
+        <location file="src/state_machine.cpp" line="39" column="7" bodyfile="src/state_machine.cpp" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -133,19 +133,22 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>The user_interface function</para><para>This function is the callback function for the server of /user_interface service <parameterlist kind="param"><parameteritem>
+<para>The user_interface function</para>
+<para>This function is the callback function for the server of /user_interface service <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>req</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the request received from the client of the user_interface.py. </para></parameterdescription>
+<para>the request received from the client of the user_interface.py. </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername>res</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the response has not been used </para></parameterdescription>
+<para>the response has not been used </para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
 <parameterlist kind="retval"><parameteritem>
@@ -153,13 +156,15 @@
 <parametername>A</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>boolean value </para></parameterdescription>
+<para>boolean value </para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>        </detaileddescription>
+</para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="49" column="1" bodyfile="src/state_machine.cpp" bodystart="49" bodyend="69"/>
+        <location file="src/state_machine.cpp" line="49" column="6" bodyfile="src/state_machine.cpp" bodystart="49" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="state__machine_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -177,30 +182,41 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>The main funtion</para><para>This function initializes everithing that is needed waits for commands and then performes the various requests to services and action </para>        </detaileddescription>
+<para>The main funtion</para>
+<para>This function initializes everithing that is needed waits for commands and then performes the various requests to services and action </para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/state_machine.cpp" line="77" column="1" bodyfile="src/state_machine.cpp" bodystart="77" bodyend="144"/>
+        <location file="src/state_machine.cpp" line="77" column="5" bodyfile="src/state_machine.cpp" bodystart="77" bodyend="144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This file will let the user interface comunicate with the <ref refid="namespacego__to__point__action" kindref="compound">go_to_point_action</ref>. </para>    </briefdescription>
+<para>This file will let the user interface comunicate with the <ref refid="namespacego__to__point__action" kindref="compound">go_to_point_action</ref>. </para>
+    </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Federico Zecchi </para></simplesect>
-<simplesect kind="version"><para>1 </para></simplesect>
-<simplesect kind="date"><para>18/06/21 </para></simplesect>
+<para><simplesect kind="author"><para>Federico Zecchi </para>
+</simplesect>
+<simplesect kind="version"><para>1 </para>
+</simplesect>
+<simplesect kind="date"><para>18/06/21 </para>
+</simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">world_width</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Define the width of the discretized world</para></parameterdescription>
+<para>Define the width of the discretized world</para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
 Services:<linebreak/>
- °/user_interface</para><para>Clients:<linebreak/>
- °/position_server</para><para>Action Client:<linebreak/>
- °/go_to_point_action Description :</para><para>This node will be the bridge between the user interface, and the <ref refid="namespacego__to__point__action" kindref="compound">go_to_point_action</ref>. It will receive commands from the user interface. It can elaborate new random target from the position_server. It can start or stop the <ref refid="namespacego__to__point__action" kindref="compound">go_to_point_action</ref> </para>    </detaileddescription>
+ °/user_interface</para>
+<para>Clients:<linebreak/>
+ °/position_server</para>
+<para>Action Client:<linebreak/>
+ °/go_to_point_action Description :</para>
+<para>This node will be the bridge between the user interface, and the <ref refid="namespacego__to__point__action" kindref="compound">go_to_point_action</ref>. It will receive commands from the user interface. It can elaborate new random target from the position_server. It can start or stop the <ref refid="namespacego__to__point__action" kindref="compound">go_to_point_action</ref> </para>
+    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
 <codeline lineno="29"><highlight class="preprocessor">#include<sp/>&quot;ros/ros.h&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -244,7 +260,7 @@ Services:<linebreak/>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>setting-up<sp/>the<sp/>node<sp/>handler<sp/>n*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/>ros::NodeHandle<sp/>n;</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialising<sp/>the<sp/>/user_interface<sp/>service<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/>ros::ServiceServer<sp/>service=<sp/>n.advertiseService(</highlight><highlight class="stringliteral">&quot;/user_interface&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespaceuser__interface" kindref="compound">user_interface</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/>ros::ServiceServer<sp/>service=<sp/>n.advertiseService(</highlight><highlight class="stringliteral">&quot;/user_interface&quot;</highlight><highlight class="normal">,<sp/><ref refid="state__machine_8cpp_1ac04c316253aedc174376e609ca84098e" kindref="member">user_interface</ref>);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialising<sp/>the<sp/>client<sp/>for<sp/>retreving<sp/>the<sp/>random<sp/>position<sp/>by<sp/>means<sp/>of<sp/>the<sp/>/position_server<sp/>service<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/>ros::ServiceClient<sp/>client_rp<sp/>=<sp/>n.serviceClient&lt;rt2_ass2::RandomPosition&gt;(</highlight><highlight class="stringliteral">&quot;/position_server&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>creating<sp/>the<sp/>action<sp/>client<sp/>*/</highlight><highlight class="normal"></highlight></codeline>

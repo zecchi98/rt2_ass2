@@ -1,27 +1,27 @@
-\hypertarget{namespacego__to__point__action}{}\section{go\+\_\+to\+\_\+point\+\_\+action Namespace Reference}
-\label{namespacego__to__point__action}\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsection*{Functions}
+\hypertarget{namespacego__to__point__action}{}\doxysection{go\+\_\+to\+\_\+point\+\_\+action Namespace Reference}
+\label{namespacego__to__point__action}\index{go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-def \hyperlink{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}{clbk\+\_\+odom} (msg)
+def \mbox{\hyperlink{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}{clbk\+\_\+odom}} (msg)
 \begin{DoxyCompactList}\small\item\em The clbk\+\_\+odom function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_ab7ad2629ed9ffbd5d9b7ca9c540d932a}{change\+\_\+state} (state)
+def \mbox{\hyperlink{namespacego__to__point__action_ab7ad2629ed9ffbd5d9b7ca9c540d932a}{change\+\_\+state}} (state)
 \begin{DoxyCompactList}\small\item\em The change\+\_\+state function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_a0bca87c6d45ca63d3152a4e8def72e2a}{normalize\+\_\+angle} (angle)
+def \mbox{\hyperlink{namespacego__to__point__action_a0bca87c6d45ca63d3152a4e8def72e2a}{normalize\+\_\+angle}} (angle)
 \begin{DoxyCompactList}\small\item\em The normalize\+\_\+angle function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}{fix\+\_\+yaw} (des\+\_\+pos)
+def \mbox{\hyperlink{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}{fix\+\_\+yaw}} (des\+\_\+pos)
 \begin{DoxyCompactList}\small\item\em The fix\+\_\+yah function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}{go\+\_\+straight\+\_\+ahead} (des\+\_\+pos)
+def \mbox{\hyperlink{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}{go\+\_\+straight\+\_\+ahead}} (des\+\_\+pos)
 \begin{DoxyCompactList}\small\item\em The go\+\_\+straight\+\_\+ahead function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}{fix\+\_\+final\+\_\+yaw} (des\+\_\+yaw)
+def \mbox{\hyperlink{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}{fix\+\_\+final\+\_\+yaw}} (des\+\_\+yaw)
 \begin{DoxyCompactList}\small\item\em The fix\+\_\+final\+\_\+yah function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}{done} ()
+def \mbox{\hyperlink{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}{done}} ()
 \begin{DoxyCompactList}\small\item\em The done function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}{planning} (goal)
+def \mbox{\hyperlink{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}{planning}} (goal)
 \begin{DoxyCompactList}\small\item\em The planning function. \end{DoxyCompactList}\item 
-def \hyperlink{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}{main} ()
+def \mbox{\hyperlink{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}{main}} ()
 \begin{DoxyCompactList}\small\item\em Documentation for the main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Variables}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{namespacego__to__point__action_afd83e8a50982500cb1aea028fa6bd8fb}\label{namespacego__to__point__action_afd83e8a50982500cb1aea028fa6bd8fb}} 
@@ -65,26 +65,31 @@ float {\bfseries ub\+\_\+d} = 0.\+6
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 \begin{DoxyVerb}.. module:: go_to_point_action
-    :platform: Unix
-    :synopsis: Python module for piloting the robot to the target
+   :platform: Unix
+   :synopsis: Python module for piloting the robot to the target
+
 .. moduleauthor:: Carmine Recchiuto <carmine.recchiuto@dibris.unige.it>
+
 ROS node for driving a robot to a specific point
 
-Subscribes to: /odom topic where the simulator publishes the robot position
+Subscribes to:
+    /odom topic where the simulator publishes the robot position
 
-Publishes to: /cmd_vel the desired robot position
+Publishes to:
+    /cmd_vel the desired robot position
 
-Service : /go_to_point to start the robot motion.
+Service :
+    /go_to_point to start the robot motion.
 \end{DoxyVerb}
  
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespacego__to__point__action_ab7ad2629ed9ffbd5d9b7ca9c540d932a}\label{namespacego__to__point__action_ab7ad2629ed9ffbd5d9b7ca9c540d932a}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!change\+\_\+state@{change\+\_\+state}}
-\index{change\+\_\+state@{change\+\_\+state}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{change\+\_\+state()}{change\_state()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!change\_state@{change\_state}}
+\index{change\_state@{change\_state}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{change\_state()}{change\_state()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
 
 
@@ -92,9 +97,9 @@ Service : /go_to_point to start the robot motion.
 The change\+\_\+state function. 
 
 It controls the state of the robot, allowing to translate or to rotate when needed. \mbox{\Hypertarget{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}\label{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!clbk\+\_\+odom@{clbk\+\_\+odom}}
-\index{clbk\+\_\+odom@{clbk\+\_\+odom}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{clbk\+\_\+odom()}{clbk\_odom()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!clbk\_odom@{clbk\_odom}}
+\index{clbk\_odom@{clbk\_odom}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{clbk\_odom()}{clbk\_odom()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+clbk\+\_\+odom (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
 
 
@@ -106,9 +111,9 @@ This Callback is for the subscriber to topic odom it keeps track of the robot po
 \begin{DoxyItemize}
 \item msg the message carrying the information \end{DoxyItemize}
 \mbox{\Hypertarget{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}\label{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!done@{done}}
-\index{done@{done}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{done()}{done()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!done@{done}}
+\index{done@{done}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -116,9 +121,9 @@ This Callback is for the subscriber to topic odom it keeps track of the robot po
 The done function. 
 
 It stops the robot meaning that the pose has been reached \mbox{\Hypertarget{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}\label{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!fix\+\_\+final\+\_\+yaw@{fix\+\_\+final\+\_\+yaw}}
-\index{fix\+\_\+final\+\_\+yaw@{fix\+\_\+final\+\_\+yaw}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{fix\+\_\+final\+\_\+yaw()}{fix\_final\_yaw()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!fix\_final\_yaw@{fix\_final\_yaw}}
+\index{fix\_final\_yaw@{fix\_final\_yaw}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{fix\_final\_yaw()}{fix\_final\_yaw()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+fix\+\_\+final\+\_\+yaw (\begin{DoxyParamCaption}\item[{}]{des\+\_\+yaw }\end{DoxyParamCaption})}
 
 
@@ -126,9 +131,9 @@ It stops the robot meaning that the pose has been reached \mbox{\Hypertarget{nam
 The fix\+\_\+final\+\_\+yah function. 
 
 It allows the robot to fix it\textquotesingle{}s yah and reach the final state(done) if the conditions are met \mbox{\Hypertarget{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}\label{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!fix\+\_\+yaw@{fix\+\_\+yaw}}
-\index{fix\+\_\+yaw@{fix\+\_\+yaw}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{fix\+\_\+yaw()}{fix\_yaw()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!fix\_yaw@{fix\_yaw}}
+\index{fix\_yaw@{fix\_yaw}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{fix\_yaw()}{fix\_yaw()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+fix\+\_\+yaw (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
 
 
@@ -141,9 +146,9 @@ It rotates the robot to fix it\textquotesingle{}s yah in the desired direction b
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}\label{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!go\+\_\+straight\+\_\+ahead@{go\+\_\+straight\+\_\+ahead}}
-\index{go\+\_\+straight\+\_\+ahead@{go\+\_\+straight\+\_\+ahead}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{go\+\_\+straight\+\_\+ahead()}{go\_straight\_ahead()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!go\_straight\_ahead@{go\_straight\_ahead}}
+\index{go\_straight\_ahead@{go\_straight\_ahead}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{go\_straight\_ahead()}{go\_straight\_ahead()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+go\+\_\+straight\+\_\+ahead (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
 
 
@@ -151,9 +156,9 @@ It rotates the robot to fix it\textquotesingle{}s yah in the desired direction b
 The go\+\_\+straight\+\_\+ahead function. 
 
 It allows the robot to go straight or to change it\textquotesingle{}s state if needed \mbox{\Hypertarget{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}\label{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!main@{main}}
-\index{main@{main}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{main()}{main()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!main@{main}}
+\index{main@{main}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -168,9 +173,9 @@ More details.
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespacego__to__point__action_a0bca87c6d45ca63d3152a4e8def72e2a}\label{namespacego__to__point__action_a0bca87c6d45ca63d3152a4e8def72e2a}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!normalize\+\_\+angle@{normalize\+\_\+angle}}
-\index{normalize\+\_\+angle@{normalize\+\_\+angle}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{normalize\+\_\+angle()}{normalize\_angle()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!normalize\_angle@{normalize\_angle}}
+\index{normalize\_angle@{normalize\_angle}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{normalize\_angle()}{normalize\_angle()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+normalize\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
 
 
@@ -178,9 +183,9 @@ More details.
 The normalize\+\_\+angle function. 
 
 It performs normalazation of an angle . \mbox{\Hypertarget{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}\label{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}} 
-\index{go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}!planning@{planning}}
-\index{planning@{planning}!go\+\_\+to\+\_\+point\+\_\+action@{go\+\_\+to\+\_\+point\+\_\+action}}
-\subsubsection{\texorpdfstring{planning()}{planning()}}
+\index{go\_to\_point\_action@{go\_to\_point\_action}!planning@{planning}}
+\index{planning@{planning}!go\_to\_point\_action@{go\_to\_point\_action}}
+\doxysubsubsection{\texorpdfstring{planning()}{planning()}}
 {\footnotesize\ttfamily def go\+\_\+to\+\_\+point\+\_\+action.\+planning (\begin{DoxyParamCaption}\item[{}]{goal }\end{DoxyParamCaption})}
 
 
