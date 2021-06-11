@@ -202,14 +202,19 @@
         <detaileddescription>
 <para>This Callback is for the subscriber to topic odom it keeps track of the robot pose.</para>
 <para><itemizedlist>
-<listitem><para>msg the message carrying the information </para>
+<listitem><para>msg the message carrying the information <verbatim>This Callback is for the subscriber to topic odom. It keeps track of the robot pose.
+
+Args:
+    msg(Odometry): the message received
+Returns: none
+</verbatim> </para>
 </listitem>
 </itemizedlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="76" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="76" bodyend="90"/>
+        <location file="scripts/go_to_point_action.py" line="76" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="76" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1ab7ad2629ed9ffbd5d9b7ca9c540d932a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -224,11 +229,17 @@
 <para>The change_state function. </para>
         </briefdescription>
         <detaileddescription>
-<para>It controls the state of the robot, allowing to translate or to rotate when needed. </para>
+<para>It controls the state of the robot, allowing to translate or to rotate when needed. <verbatim>It controls the state of the robot, allowing to translate or to rotate when needed.
+
+Args:
+    state: state of the robot
+
+Returns: none
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="98" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="98" bodyend="103"/>
+        <location file="scripts/go_to_point_action.py" line="105" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="105" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1a0bca87c6d45ca63d3152a4e8def72e2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -243,11 +254,17 @@
 <para>The normalize_angle function. </para>
         </briefdescription>
         <detaileddescription>
-<para>It performs normalazation of an angle . </para>
+<para>It performs normalazation of an angle . <verbatim>Function for normalizing the angle between -pi and pi.
+
+Args:
+    angle(Float): the input angle
+Returns:angle(Float):
+    the normalized angle.
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="107" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="107" bodyend="111"/>
+        <location file="scripts/go_to_point_action.py" line="122" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="122" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1a18e7fef09d30f59bb91061f4b91f87e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -267,7 +284,13 @@
 <parametername>des_pos</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>from this desired position computes the desired yah </para>
+<para>from this desired position computes the desired yah <verbatim>Function for fixing the angle of the robot.
+It rotates the robot to fix it&apos;s yah in the desired direction by publishing a twist message on /cmd_vel
+
+Args:
+    des_pos(Point): the desiderd pose
+Returns: none
+</verbatim> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -275,7 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="117" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="117" bodyend="134"/>
+        <location file="scripts/go_to_point_action.py" line="140" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="140" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1a7c35034eab524fbff7d05d80fd65ede4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -290,11 +313,16 @@
 <para>The go_straight_ahead function. </para>
         </briefdescription>
         <detaileddescription>
-<para>It allows the robot to go straight or to change it&apos;s state if needed </para>
+<para>It allows the robot to go straight or to change it&apos;s state if needed <verbatim>Function for going straight ahead to the target.
+
+Args:
+    des_pos(Point): the desiderd pose
+Returns: none
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="138" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="138" bodyend="155"/>
+        <location file="scripts/go_to_point_action.py" line="169" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="169" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1a068188471dd5fc0ed3ea371e3a32338a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -309,11 +337,16 @@
 <para>The fix_final_yah function. </para>
         </briefdescription>
         <detaileddescription>
-<para>It allows the robot to fix it&apos;s yah and reach the final state(done) if the conditions are met </para>
+<para>It allows the robot to fix it&apos;s yah and reach the final state(done) if the conditions are met <verbatim>Function for fixing the final angle of the robot, to the final position
+
+Args:
+    des_yaw(float): the desiderd yaw
+Returns: none
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="160" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="160" bodyend="174"/>
+        <location file="scripts/go_to_point_action.py" line="198" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="198" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1a9fec1cd57aebd720828b5bab962048db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -324,11 +357,15 @@
 <para>The done function. </para>
         </briefdescription>
         <detaileddescription>
-<para>It stops the robot meaning that the pose has been reached </para>
+<para>It stops the robot meaning that the pose has been reached <verbatim>Calling this function, the robot will stop
+
+Args: none
+Returns: none
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="178" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="178" bodyend="184"/>
+        <location file="scripts/go_to_point_action.py" line="223" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="223" bodyend="235"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1ab3bc8cf3239eaa0def69f3a87a98976c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -348,7 +385,13 @@
 <parametername>goal</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>It is the goal required in the action server </para>
+<para>It is the goal required in the action server <verbatim>It is the action callback. The script will remain inside this function, due to the while loop.
+Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated
+
+Args:
+    goal(rt2_ass2.msg.go_to_pointActionGoal): goal of the robot
+Returns: none
+</verbatim> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -356,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="190" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="190" bodyend="257"/>
+        <location file="scripts/go_to_point_action.py" line="241" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="241" bodyend="315"/>
       </memberdef>
       <memberdef kind="function" id="namespacego__to__point__action_1a33cfc08b34e07f53ddda67d2ab551ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -381,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point_action.py" line="263" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="263" bodyend="277"/>
+        <location file="scripts/go_to_point_action.py" line="321" column="1" bodyfile="scripts/go_to_point_action.py" bodystart="321" bodyend="335"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

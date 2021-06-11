@@ -20,15 +20,6 @@
     <member refid="conf_8py_1a6eba2d2c7ae923054b1c49e686ec89b9" kind="variable"><name>breathe_default_project</name></member>
     <member refid="conf_8py_1a54585428ce84441199d9dfd7087e2243" kind="variable"><name>breathe_default_members</name></member>
   </compound>
-  <compound refid="namespacefuncanimation" kind="namespace"><name>funcanimation</name>
-    <member refid="funcanimation_8py_1acdc4f70b93d20704d872bc9df14c4b8b" kind="variable"><name>fig</name></member>
-    <member refid="funcanimation_8py_1a06795eb6ab1928d97041cc7f8094fbca" kind="variable"><name>ax</name></member>
-    <member refid="funcanimation_8py_1afb4dcbca1f91151db0f5030e6e9f6cc9" kind="variable"><name>xdata</name></member>
-    <member refid="funcanimation_8py_1a985bffe03c0d24f4dba393d29b446d26" kind="variable"><name>ydata</name></member>
-    <member refid="funcanimation_8py_1a06dbe7bba4ff568ebac84e9b0911ecf4" kind="variable"><name>ani</name></member>
-    <member refid="funcanimation_8py_1abbd77de6cd101cdfad2833a3d262cb28" kind="function"><name>init</name></member>
-    <member refid="funcanimation_8py_1a0d84eaa351021a17c2e8291e0d3aa2f7" kind="function"><name>update</name></member>
-  </compound>
   <compound refid="namespacego__to__point__action" kind="namespace"><name>go_to_point_action</name>
     <member refid="namespacego__to__point__action_1afd83e8a50982500cb1aea028fa6bd8fb" kind="variable"><name>position_</name></member>
     <member refid="namespacego__to__point__action_1a7e81c61a8a01745a08f175577455bcb4" kind="variable"><name>yaw_</name></member>
@@ -53,17 +44,6 @@
     <member refid="namespacego__to__point__action_1ab3bc8cf3239eaa0def69f3a87a98976c" kind="function"><name>planning</name></member>
     <member refid="namespacego__to__point__action_1a33cfc08b34e07f53ddda67d2ab551ba1" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="namespaceprova" kind="namespace"><name>prova</name>
-    <member refid="prova_8py_1a09cb22986bba8788df6787c7b149a01e" kind="variable"><name>x_vals</name></member>
-    <member refid="prova_8py_1a3ae1453e5eed5060cc9cd10ccd425929" kind="variable"><name>y_vals</name></member>
-    <member refid="prova_8py_1a537b867ce9fb668ca633c7bb813ca586" kind="variable"><name>x</name></member>
-    <member refid="prova_8py_1a14b11e36d1435eabdca11adfc32651c2" kind="variable"><name>y1</name></member>
-    <member refid="prova_8py_1a1c99b95b9a731385538bdd26fcef58f9" kind="variable"><name>y2</name></member>
-    <member refid="prova_8py_1a9a5cf9fdef765ddb59c7ed9dfb067a9e" kind="variable"><name>index</name></member>
-    <member refid="prova_8py_1a31cdf26d93211c6c70b72fb32cbd56fa" kind="variable"><name>ani</name></member>
-    <member refid="prova_8py_1abbedcaab3ae349dd0aef330b1edf5221" kind="function"><name>odom_callback</name></member>
-    <member refid="prova_8py_1a3ee04197e37454925485e614ba1eef7c" kind="function"><name>animate</name></member>
-  </compound>
   <compound refid="namespacert2__ass2" kind="namespace"><name>rt2_ass2</name>
   </compound>
   <compound refid="namespaceuser__interface" kind="namespace"><name>user_interface</name>
@@ -76,10 +56,6 @@
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
   <compound refid="go__to__point__action_8py" kind="file"><name>go_to_point_action.py</name>
-  </compound>
-  <compound refid="funcanimation_8py" kind="file"><name>funcanimation.py</name>
-  </compound>
-  <compound refid="prova_8py" kind="file"><name>prova.py</name>
   </compound>
   <compound refid="user__interface_8py" kind="file"><name>user_interface.py</name>
   </compound>
@@ -98,14 +74,6 @@
     <member refid="state__machine_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
-  </compound>
-  <compound refid="dir_7626c0836d743782f3f02384448b95d0" kind="dir"><name>scripts/notebooks/portatile/backup</name>
-  </compound>
-  <compound refid="dir_89c2563b10734879c53c4f412f544cda" kind="dir"><name>scripts/notebooks/portatile/backup/non mi serve</name>
-  </compound>
-  <compound refid="dir_e1bb095ba14a60c4628b453f4a1b6294" kind="dir"><name>scripts/notebooks</name>
-  </compound>
-  <compound refid="dir_abfc4c5bd31ca786844f388b736954b8" kind="dir"><name>scripts/notebooks/portatile</name>
   </compound>
   <compound refid="dir_53e6fa9553ac22a5646d2a2b2d7b97a1" kind="dir"><name>scripts</name>
   </compound>

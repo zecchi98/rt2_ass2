@@ -74,6 +74,13 @@ act_s = None
 #
 # @arg msg the message carrying the information
 def clbk_odom(msg):
+    """
+    This Callback is for the subscriber to topic odom. It keeps track of the robot pose.
+
+    Args:
+        msg(Odometry): the message received
+    Returns: none
+    """
     global position_
     global yaw_
 
@@ -96,6 +103,14 @@ def clbk_odom(msg):
 # @param state indicates the new state to chancge to
 # @var state_ the current state of the robot
 def change_state(state):
+    """
+    It controls the state of the robot, allowing to translate or to rotate when needed.
+
+    Args:
+        state: state of the robot
+
+    Returns: none
+    """
     global state_
     state_ = state
     print ('State changed to [%s]' % state_)
@@ -105,6 +120,14 @@ def change_state(state):
 #
 #  It performs normalazation of an angle .
 def normalize_angle(angle):
+    """
+    Function for normalizing the angle between -pi and pi.
+
+    Args:
+        angle(Float): the input angle
+    Returns:angle(Float):
+        the normalized angle.
+    """
     if(math.fabs(angle) > math.pi):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
@@ -115,6 +138,14 @@ def normalize_angle(angle):
 #  by publishing a twist message on /cmd_vel
 #  @param des_pos from this desired position computes the desired yah
 def fix_yaw(des_pos):
+    """
+    Function for fixing the angle of the robot.
+    It rotates the robot to fix it's yah in the desired direction by publishing a twist message on /cmd_vel
+
+    Args:
+        des_pos(Point): the desiderd pose
+    Returns: none
+    """
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
     twist_msg = Twist()
@@ -136,6 +167,13 @@ def fix_yaw(des_pos):
 #
 #  It allows the robot to go straight or to change it's state if needed
 def go_straight_ahead(des_pos):
+    """
+    Function for going straight ahead to the target.
+
+    Args:
+        des_pos(Point): the desiderd pose
+    Returns: none
+    """
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = desired_yaw - yaw_
     err_pos = math.sqrt(pow(des_pos.y - position_.y, 2) +
@@ -158,6 +196,13 @@ def go_straight_ahead(des_pos):
 #  It allows the robot to fix it's yah and reach the final state(done)
 #  if the conditions are met
 def fix_final_yaw(des_yaw):
+    """
+    Function for fixing the final angle of the robot, to the final position
+
+    Args:
+        des_yaw(float): the desiderd yaw
+    Returns: none
+    """
     err_yaw = normalize_angle(des_yaw - yaw_)
     #rospy.loginfo(err_yaw)
     twist_msg = Twist()
@@ -176,6 +221,12 @@ def fix_final_yaw(des_yaw):
 #
 #  It stops the robot meaning that the pose has been reached
 def done():
+    """
+    Calling this function, the robot will stop
+
+    Args: none
+    Returns: none
+    """
     twist_msg = Twist()
     twist_msg.linear.x = 0
     twist_msg.angular.z = 0
@@ -188,7 +239,14 @@ def done():
 #  Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated
 # @param goal It is the goal required in the action server
 def planning(goal):
+    """
+    It is the action callback. The script will remain inside this function, due to the while loop.
+    Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated
 
+    Args:
+        goal(rt2_ass2.msg.go_to_pointActionGoal): goal of the robot
+    Returns: none
+    """
     global state_, desired_position_,act_s,kp_a,kp_d
 
 #   desider position and orientation acquired

@@ -96,7 +96,14 @@ Service :
 
 The change\+\_\+state function. 
 
-It controls the state of the robot, allowing to translate or to rotate when needed. \mbox{\Hypertarget{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}\label{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}} 
+It controls the state of the robot, allowing to translate or to rotate when needed. \begin{DoxyVerb}It controls the state of the robot, allowing to translate or to rotate when needed.
+
+Args:
+    state: state of the robot
+
+Returns: none
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}\label{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}} 
 \index{go\_to\_point\_action@{go\_to\_point\_action}!clbk\_odom@{clbk\_odom}}
 \index{clbk\_odom@{clbk\_odom}!go\_to\_point\_action@{go\_to\_point\_action}}
 \doxysubsubsection{\texorpdfstring{clbk\_odom()}{clbk\_odom()}}
@@ -109,7 +116,13 @@ The clbk\+\_\+odom function.
 This Callback is for the subscriber to topic odom it keeps track of the robot pose.
 
 \begin{DoxyItemize}
-\item msg the message carrying the information \end{DoxyItemize}
+\item msg the message carrying the information \begin{DoxyVerb}This Callback is for the subscriber to topic odom. It keeps track of the robot pose.
+
+Args:
+    msg(Odometry): the message received
+Returns: none
+\end{DoxyVerb}
+ \end{DoxyItemize}
 \mbox{\Hypertarget{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}\label{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}} 
 \index{go\_to\_point\_action@{go\_to\_point\_action}!done@{done}}
 \index{done@{done}!go\_to\_point\_action@{go\_to\_point\_action}}
@@ -120,7 +133,12 @@ This Callback is for the subscriber to topic odom it keeps track of the robot po
 
 The done function. 
 
-It stops the robot meaning that the pose has been reached \mbox{\Hypertarget{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}\label{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}} 
+It stops the robot meaning that the pose has been reached \begin{DoxyVerb}Calling this function, the robot will stop
+
+Args: none
+Returns: none
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}\label{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}} 
 \index{go\_to\_point\_action@{go\_to\_point\_action}!fix\_final\_yaw@{fix\_final\_yaw}}
 \index{fix\_final\_yaw@{fix\_final\_yaw}!go\_to\_point\_action@{go\_to\_point\_action}}
 \doxysubsubsection{\texorpdfstring{fix\_final\_yaw()}{fix\_final\_yaw()}}
@@ -130,7 +148,13 @@ It stops the robot meaning that the pose has been reached \mbox{\Hypertarget{nam
 
 The fix\+\_\+final\+\_\+yah function. 
 
-It allows the robot to fix it\textquotesingle{}s yah and reach the final state(done) if the conditions are met \mbox{\Hypertarget{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}\label{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}} 
+It allows the robot to fix it\textquotesingle{}s yah and reach the final state(done) if the conditions are met \begin{DoxyVerb}Function for fixing the final angle of the robot, to the final position
+
+Args:
+    des_yaw(float): the desiderd yaw
+Returns: none
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}\label{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}} 
 \index{go\_to\_point\_action@{go\_to\_point\_action}!fix\_yaw@{fix\_yaw}}
 \index{fix\_yaw@{fix\_yaw}!go\_to\_point\_action@{go\_to\_point\_action}}
 \doxysubsubsection{\texorpdfstring{fix\_yaw()}{fix\_yaw()}}
@@ -142,7 +166,14 @@ The fix\+\_\+yah function.
 
 It rotates the robot to fix it\textquotesingle{}s yah in the desired direction by publishing a twist message on /cmd\+\_\+vel 
 \begin{DoxyParams}{Parameters}
-{\em des\+\_\+pos} & from this desired position computes the desired yah \\
+{\em des\+\_\+pos} & from this desired position computes the desired yah \begin{DoxyVerb}Function for fixing the angle of the robot.
+It rotates the robot to fix it's yah in the desired direction by publishing a twist message on /cmd_vel
+
+Args:
+    des_pos(Point): the desiderd pose
+Returns: none
+\end{DoxyVerb}
+ \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}\label{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}} 
@@ -155,7 +186,13 @@ It rotates the robot to fix it\textquotesingle{}s yah in the desired direction b
 
 The go\+\_\+straight\+\_\+ahead function. 
 
-It allows the robot to go straight or to change it\textquotesingle{}s state if needed \mbox{\Hypertarget{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}\label{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}} 
+It allows the robot to go straight or to change it\textquotesingle{}s state if needed \begin{DoxyVerb}Function for going straight ahead to the target.
+
+Args:
+    des_pos(Point): the desiderd pose
+Returns: none
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}\label{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}} 
 \index{go\_to\_point\_action@{go\_to\_point\_action}!main@{main}}
 \index{main@{main}!go\_to\_point\_action@{go\_to\_point\_action}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
@@ -182,7 +219,14 @@ More details.
 
 The normalize\+\_\+angle function. 
 
-It performs normalazation of an angle . \mbox{\Hypertarget{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}\label{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}} 
+It performs normalazation of an angle . \begin{DoxyVerb}Function for normalizing the angle between -pi and pi.
+
+Args:
+    angle(Float): the input angle
+Returns:angle(Float):
+    the normalized angle.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}\label{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}} 
 \index{go\_to\_point\_action@{go\_to\_point\_action}!planning@{planning}}
 \index{planning@{planning}!go\_to\_point\_action@{go\_to\_point\_action}}
 \doxysubsubsection{\texorpdfstring{planning()}{planning()}}
@@ -194,6 +238,13 @@ The planning function.
 
 It is the action callback. The script will remain inside this function, due to the while loop. Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated 
 \begin{DoxyParams}{Parameters}
-{\em goal} & It is the goal required in the action server \\
+{\em goal} & It is the goal required in the action server \begin{DoxyVerb}It is the action callback. The script will remain inside this function, due to the while loop.
+Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated
+
+Args:
+    goal(rt2_ass2.msg.go_to_pointActionGoal): goal of the robot
+Returns: none
+\end{DoxyVerb}
+ \\
 \hline
 \end{DoxyParams}

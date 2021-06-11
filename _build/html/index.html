@@ -191,6 +191,103 @@
 <dt>Service :</dt><dd><p>/go_to_point to start the robot motion.</p>
 </dd>
 </dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.change_state">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">change_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#change_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.change_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>It controls the state of the robot, allowing to translate or to rotate when needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> – state of the robot</p>
+</dd>
+</dl>
+<p>Returns: none</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.clbk_odom">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">clbk_odom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#clbk_odom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.clbk_odom" title="Permalink to this definition">¶</a></dt>
+<dd><p>This Callback is for the subscriber to topic odom. It keeps track of the robot pose.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msg</strong> (<em>Odometry</em>) – the message received</p>
+</dd>
+</dl>
+<p>Returns: none</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.done">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#done"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calling this function, the robot will stop</p>
+<p>Args: none
+Returns: none</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.fix_final_yaw">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">fix_final_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_yaw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#fix_final_yaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.fix_final_yaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for fixing the final angle of the robot, to the final position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_yaw</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – the desiderd yaw</p>
+</dd>
+</dl>
+<p>Returns: none</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.fix_yaw">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">fix_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#fix_yaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.fix_yaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for fixing the angle of the robot.
+It rotates the robot to fix it’s yah in the desired direction by publishing a twist message on /cmd_vel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_pos</strong> (<em>Point</em>) – the desiderd pose</p>
+</dd>
+</dl>
+<p>Returns: none</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.go_straight_ahead">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">go_straight_ahead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#go_straight_ahead"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.go_straight_ahead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for going straight ahead to the target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_pos</strong> (<em>Point</em>) – the desiderd pose</p>
+</dd>
+</dl>
+<p>Returns: none</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.normalize_angle">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">normalize_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#normalize_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.normalize_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for normalizing the angle between -pi and pi.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>Float</em>) – the input angle</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns:angle(Float):</dt><dd><p>the normalized angle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.go_to_point_action.planning">
+<span class="sig-prename descclassname"><span class="pre">scripts.go_to_point_action.</span></span><span class="sig-name descname"><span class="pre">planning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goal</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point_action.html#planning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point_action.planning" title="Permalink to this definition">¶</a></dt>
+<dd><p>It is the action callback. The script will remain inside this function, due to the while loop.
+Here it will wait for new goal, ask the robot to reach them and delete goal if required. The state will also be updated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>goal</strong> (<em>rt2_ass2.msg.go_to_pointActionGoal</em>) – goal of the robot</p>
+</dd>
+</dl>
+<p>Returns: none</p>
+</dd></dl>
+
 </div>
 <div class="section" id="position-service">
 <h1>Position Service<a class="headerlink" href="#position-service" title="Permalink to this headline">¶</a></h1>
