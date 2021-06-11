@@ -13,13 +13,13 @@ Choose a branch, then:
 
 If you want the classical gazebo visualization:
 
-  roslaunch rt2_ass2 sim.launch
+- roslaunch rt2_ass2 sim.launch
  
 If you don't want to see gazebo opened due to, for example, the amount of cpu usage:
  
-  roslaunch rt2_ass2 sim_small.launch
+- roslaunch rt2_ass2 sim_small.launch
  
 To open the user_interface:
   
-  Open jupyter notebook, or jupyter lab;
-  From one of the two software open "user_notebook_interface.ipynb" located in the folder notebooks
+- Open jupyter notebook, or jupyter lab;
+- From one of the two software open "user_notebook_interface.ipynb" located in the folder notebooks
