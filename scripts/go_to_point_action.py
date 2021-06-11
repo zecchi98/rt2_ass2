@@ -1,25 +1,5 @@
 #!/usr/bin/env python
 
-
-"""
-.. module:: go_to_point_action
-   :platform: Unix
-   :synopsis: Python module for piloting the robot to the target
-
-.. moduleauthor:: Carmine Recchiuto <carmine.recchiuto@dibris.unige.it>
-
-ROS node for driving a robot to a specific point
-
-Subscribes to:
-    /odom topic where the simulator publishes the robot position
-
-Publishes to:
-    /cmd_vel the desired robot position
-
-Service :
-    /go_to_point to start the robot motion.
-"""
-
 ## @package rt2_ass2
 # \file go_to_point_action.py
 # \brief This file will directly operate on the robot based on the goal received
