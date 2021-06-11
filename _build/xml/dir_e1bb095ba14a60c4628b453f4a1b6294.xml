@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_e1bb095ba14a60c4628b453f4a1b6294" kind="dir">
+    <compoundname>scripts/notebooks</compoundname>
+    <innerdir refid="dir_abfc4c5bd31ca786844f388b736954b8">scripts/notebooks/portatile</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/notebooks/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceprova" kind="namespace" language="Python">
+    <compoundname>prova</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="prova_8py_1a09cb22986bba8788df6787c7b149a01e" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list prova.x_vals</definition>
+        <argsstring></argsstring>
+        <name>x_vals</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="19" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="prova_8py_1a3ae1453e5eed5060cc9cd10ccd425929" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list prova.y_vals</definition>
+        <argsstring></argsstring>
+        <name>y_vals</name>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="20" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="prova_8py_1a537b867ce9fb668ca633c7bb813ca586" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prova.x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="21" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="prova_8py_1a14b11e36d1435eabdca11adfc32651c2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prova.y1</definition>
+        <argsstring></argsstring>
+        <name>y1</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="22" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="prova_8py_1a1c99b95b9a731385538bdd26fcef58f9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prova.y2</definition>
+        <argsstring></argsstring>
+        <name>y2</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="23" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="prova_8py_1a9a5cf9fdef765ddb59c7ed9dfb067a9e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prova.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <initializer>=  count()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="24" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="prova_8py_1a31cdf26d93211c6c70b72fb32cbd56fa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>prova.ani</definition>
+        <argsstring></argsstring>
+        <name>ani</name>
+        <initializer>=  FuncAnimation(plt.gcf(), animate, interval=1000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="47" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="prova_8py_1abbedcaab3ae349dd0aef330b1edf5221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def prova.odom_callback</definition>
+        <argsstring>(msg)</argsstring>
+        <name>odom_callback</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="27" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="27" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="prova_8py_1a3ee04197e37454925485e614ba1eef7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def prova.animate</definition>
+        <argsstring>(i)</argsstring>
+        <name>animate</name>
+        <param>
+          <type>i</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="36" column="1" bodyfile="scripts/notebooks/portatile/backup/non mi serve/prova.py" bodystart="36" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="scripts/notebooks/portatile/backup/non mi serve/prova.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

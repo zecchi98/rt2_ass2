@@ -1,0 +1,88 @@
+\hypertarget{go__to__point__action_8py}{}\doxysection{scripts/go\+\_\+to\+\_\+point\+\_\+action.py File Reference}
+\label{go__to__point__action_8py}\index{scripts/go\_to\_point\_action.py@{scripts/go\_to\_point\_action.py}}
+
+
+This file will directly operate on the robot based on the goal received.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacego__to__point__action}{go\+\_\+to\+\_\+point\+\_\+action}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacego__to__point__action_affe1389e38557b69ee71adea85b846b2}{go\+\_\+to\+\_\+point\+\_\+action.\+clbk\+\_\+odom}} (msg)
+\begin{DoxyCompactList}\small\item\em The clbk\+\_\+odom function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_ab7ad2629ed9ffbd5d9b7ca9c540d932a}{go\+\_\+to\+\_\+point\+\_\+action.\+change\+\_\+state}} (state)
+\begin{DoxyCompactList}\small\item\em The change\+\_\+state function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_a0bca87c6d45ca63d3152a4e8def72e2a}{go\+\_\+to\+\_\+point\+\_\+action.\+normalize\+\_\+angle}} (angle)
+\begin{DoxyCompactList}\small\item\em The normalize\+\_\+angle function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_a18e7fef09d30f59bb91061f4b91f87e6}{go\+\_\+to\+\_\+point\+\_\+action.\+fix\+\_\+yaw}} (des\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em The fix\+\_\+yah function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_a7c35034eab524fbff7d05d80fd65ede4}{go\+\_\+to\+\_\+point\+\_\+action.\+go\+\_\+straight\+\_\+ahead}} (des\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em The go\+\_\+straight\+\_\+ahead function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_a068188471dd5fc0ed3ea371e3a32338a}{go\+\_\+to\+\_\+point\+\_\+action.\+fix\+\_\+final\+\_\+yaw}} (des\+\_\+yaw)
+\begin{DoxyCompactList}\small\item\em The fix\+\_\+final\+\_\+yah function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_a9fec1cd57aebd720828b5bab962048db}{go\+\_\+to\+\_\+point\+\_\+action.\+done}} ()
+\begin{DoxyCompactList}\small\item\em The done function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_ab3bc8cf3239eaa0def69f3a87a98976c}{go\+\_\+to\+\_\+point\+\_\+action.\+planning}} (goal)
+\begin{DoxyCompactList}\small\item\em The planning function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point__action_a33cfc08b34e07f53ddda67d2ab551ba1}{go\+\_\+to\+\_\+point\+\_\+action.\+main}} ()
+\begin{DoxyCompactList}\small\item\em Documentation for the main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_afd83e8a50982500cb1aea028fa6bd8fb}\label{namespacego__to__point__action_afd83e8a50982500cb1aea028fa6bd8fb}} 
+{\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+position\+\_\+} = Point()
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a7e81c61a8a01745a08f175577455bcb4}\label{namespacego__to__point__action_a7e81c61a8a01745a08f175577455bcb4}} 
+int {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+yaw\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a513d83133bce80caeaf1f02289d6c12b}\label{namespacego__to__point__action_a513d83133bce80caeaf1f02289d6c12b}} 
+int {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+state\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a6d09e37099932459bc3e4146007cce86}\label{namespacego__to__point__action_a6d09e37099932459bc3e4146007cce86}} 
+{\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+pub\+\_\+} = None
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a99d0c1c8c5e359fcd5f1901e25a86a2d}\label{namespacego__to__point__action_a99d0c1c8c5e359fcd5f1901e25a86a2d}} 
+int {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+yaw\+\_\+precision\+\_\+} = math.\+pi / 9
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_aeaede468f4753c2c476474b35b81754c}\label{namespacego__to__point__action_aeaede468f4753c2c476474b35b81754c}} 
+int {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+yaw\+\_\+precision\+\_\+2\+\_\+} = math.\+pi / 90
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a01a3cd0c013f3c1712758e04b4bc91f4}\label{namespacego__to__point__action_a01a3cd0c013f3c1712758e04b4bc91f4}} 
+float {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+dist\+\_\+precision\+\_\+} = 0.\+1
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a67a9de26fa4f88312f9cc4a8ecedb369}\label{namespacego__to__point__action_a67a9de26fa4f88312f9cc4a8ecedb369}} 
+float {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+kp\+\_\+a} = -\/3.\+0
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_acd565e807f177f678d6a12d504d01e60}\label{namespacego__to__point__action_acd565e807f177f678d6a12d504d01e60}} 
+float {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+kp\+\_\+d} = 0.\+2
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a9cb07d74a9d8087eb04da488c77c118c}\label{namespacego__to__point__action_a9cb07d74a9d8087eb04da488c77c118c}} 
+float {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+ub\+\_\+a} = 0.\+6
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a156fcdad5d5c28042b46d45d323a9fac}\label{namespacego__to__point__action_a156fcdad5d5c28042b46d45d323a9fac}} 
+float {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+lb\+\_\+a} = -\/0.\+5
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a05a9d1a5cc9bd5e985d6ad5247ac985d}\label{namespacego__to__point__action_a05a9d1a5cc9bd5e985d6ad5247ac985d}} 
+float {\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+ub\+\_\+d} = 0.\+6
+\item 
+\mbox{\Hypertarget{namespacego__to__point__action_a3994b1577d1a499ce8c7352036ee6486}\label{namespacego__to__point__action_a3994b1577d1a499ce8c7352036ee6486}} 
+{\bfseries go\+\_\+to\+\_\+point\+\_\+action.\+act\+\_\+s} = None
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file will directly operate on the robot based on the goal received. 
+
+\begin{DoxyAuthor}{Author}
+Federico Zecchi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18/06/21
+\end{DoxyDate}
+Action Server\+:~\newline
+ °/go\+\_\+to\+\_\+point\+\_\+action 
