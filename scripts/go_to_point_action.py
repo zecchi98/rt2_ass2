@@ -28,7 +28,7 @@ Service :
 # \details
 #
 # Action Server:<BR>
-#  °/go_to_point_action
+#  /go_to_point_action
 #
 #
 import rospy
